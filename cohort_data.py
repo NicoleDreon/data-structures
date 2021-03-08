@@ -14,13 +14,25 @@ def all_houses(filename):
     Return:
       - set[str]: a set of strings
     """
+    # parse lines of filename 
+    # parse line by |
+    # grab the house name by index
+    # push house name into houses set
+    # return houses 
 
     houses = set()
 
-    # TODO: replace this with your code
+    open_file = open(filename)
 
+    for line in open_file:
+      line_list = line.split('|')
+      if '' in line_list:
+        pass 
+      else: 
+        houses.add(line_list[2])
+
+      
     return houses
-
 
 def students_by_cohort(filename, cohort='All'):
     """Return a list of students' full names by cohort.
